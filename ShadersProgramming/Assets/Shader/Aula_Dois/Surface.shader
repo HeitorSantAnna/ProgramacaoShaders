@@ -27,7 +27,7 @@ Shader "Custom/Surface"
         {
 
             //fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
-            o.Albedo = (_ColorH - _Color);
+            o.Albedo = (_ColorH * _Color);
         }
         ENDCG
     }
