@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_NewSurfaceShader
-  m_Shader: {fileID: 4800000, guid: 1a3df596d4fedfac49cc4134f6ae0545, type: 3}
+  m_Name: Sete
+  m_Shader: {fileID: 4800000, guid: 46da2c42ce0972b46b4bd70dca5792ca, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,9 +29,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Glossiness: 0.5
-    - _Metallic: 0
+    - _RB: 0
+    - _RX: 1
+    - _RY: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _SecColor: {r: 0.04705883, g: 0.04705883, b: 0.96470594, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

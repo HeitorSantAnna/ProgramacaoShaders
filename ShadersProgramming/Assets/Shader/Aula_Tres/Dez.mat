@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_PrimriraDois
-  m_Shader: {fileID: 4800000, guid: 31f8e45eeeeb3b7ae92f82f29d3dd1c1, type: 3}
+  m_Name: Dez
+  m_Shader: {fileID: 4800000, guid: cd10a2bdb75342e42b9fbcc8ecc48081, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -31,11 +31,11 @@ Material:
     m_Floats:
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _RB: 0
-    - _RX: 20
-    - _RY: 1
+    - _RB: 0.8
+    - _RX: 0
+    - _RY: 0
     m_Colors:
-    - _Color: {r: 0.5943396, g: 0.053266272, b: 0.053266272, a: 1}
-    - _SecColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _SecColor: {r: 0.11764707, g: 0.12941177, b: 0.92549026, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
