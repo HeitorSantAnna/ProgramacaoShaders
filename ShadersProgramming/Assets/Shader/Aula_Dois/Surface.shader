@@ -2,9 +2,9 @@ Shader "Custom/Surface"
 {
     Properties
     {
-        _Color ("Color", Color) = (0,0,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _ColorH ("ColorH", Color) = (1, 0, 1)
+        _ColorW ("Color in White", Color) = (1, 0, 1)
+        _ColorB ("Color in Black", Color) = (0, 1, 1)
     }
     SubShader
     {
@@ -19,15 +19,31 @@ Shader "Custom/Surface"
             float2 uv_MainTex;
         };
 
-        fixed4 _Color;
+        fixed4 _ColorB;
 
-        fixed4 _ColorH;
+        fixed4 _ColorW;
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
+            if(IN.uv_MainTex.x > 0.5)
+            {
+                float4 colorB= float4(_ColorB);
+                o.Albedo = colorB;
+            } else{
+                float4 colorw = float4(_ColorW);
+                o.Albedo = colorw;
+            }
 
-            //fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
-            o.Albedo = (_ColorH * _Color);
+            if(IN.uv_MainTex.y > 0.5)
+            {
+                float4 colorw = float4(_ColorW);
+                o.Albedo -= colorw;
+            } 
+            else
+            {
+                float4 colorB= float4(_ColorB);
+                o.Albedo -= colorB;
+            }
         }
         ENDCG
     }
