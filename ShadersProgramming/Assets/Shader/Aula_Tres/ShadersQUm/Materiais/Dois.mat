@@ -31,17 +31,17 @@ Material:
     m_Floats:
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _RB: -0.2
+    - _RB: 6.6
     - _RBO: -0.2
     - _RBT: -0.2
-    - _RX: -1
+    - _RX: 3
     - _RXO: 1
     - _RXT: -1
-    - _RY: 1
+    - _RY: 5
     - _RYO: -1
     - _RYT: 1
     m_Colors:
-    - _Color: {r: 0.9764151, g: 0.9773712, b: 1, a: 1}
-    - _SecColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.14117648, g: 0.039215688, b: 0.90196085, a: 1}
+    - _SecColor: {r: 0.8980393, g: 0.04705883, b: 0.1254902, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

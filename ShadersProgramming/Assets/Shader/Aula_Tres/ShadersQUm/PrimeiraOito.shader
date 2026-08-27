@@ -46,19 +46,6 @@ Shader "Custom/PrimeiraOito"
 
             float i = ((uv.y * ry) + rb);
 
-            /*float result = j - i;
-
-            float g = floor(sin((uv.y * rx) + ry) * rb + rc);
-
-            if(g >= 0.5)
-            {
-                o.Albedo = _SecColor;
-            }
-            else
-            {
-                o.Albedo = _Color;
-            }*/
-
             if(uv.x >= 0.5 && uv.y < 0.5 || uv.x < 0.5 && uv.y >= 0.5)
             {
                 o.Albedo = _SecColor;
