@@ -5,11 +5,11 @@ Shader "Custom/PrimeiraTres"
         _Color ("Color", Color) = (1,1,1,1)
         _SecColor ("Segunda Cor", Color) = (0, 0, 0, 1)
         _Blue ("Azul", Color) = (0, 0, 1, 1)
-        _Red ("Vermelho", Color) = (1, 0, 0, 1)
-        _Green ("Verde", Color) = (0, 1, 0, 1)
+        _Red ("Vermelho", Color) = (0, 0, 0, 1)
+        _Green ("Verde", Color) = (0, 0, 0, 1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _RX ("Alinhamento em X", Range(-10, 10)) = 0
-        _RY ("Alinhamento em Y", Range(-10, 10)) = 0
+        _RX ("Alinhamento em X", Range(-20, 20)) = 0
+        _RY ("Alinhamento em Y", Range(-20, 20)) = 0
         _RB ("Alinhamento em B", Range(-20, 20)) = 0
     }
     SubShader
@@ -36,27 +36,18 @@ Shader "Custom/PrimeiraTres"
 
             float2 uv = IN.uv_MainTex;
 
-            float limitv = ((uv.x * _RX) + _RB) + ((uv.y * _RY) + _RB);
+            //Usar sin e cos para variar entre zero e um
+            //O sin em x é 1.5
 
-            fixed4 res = _Red + _Green;
-          
-            if(uv.y >= 0.5 && limitv < 0.5)
-            {
-                res = _Green = (0, 0, 0, 0);
-            }
-            else 
-            {
-                res = _Green = (0, 1, 0, 1);
-            }
+            //limit red x = 2, y = -2, b = -2
+            float limitred = ((uv.x * 2)) - ((uv.y * -2)) - 2;
 
-            if(uv.y <= 0.5 && limitv < 0.5)
-            {
-                res = _Red = (0, 0, 0, 0);
-            }
-            else
-            {
-                res = _Red = (1, 1, 1, 1);
-            }
+            float limitgreen = ((uv.x * 1)) - ((uv.y * 1)) + 0;
+
+            fixed4 tes = fixed4(limitred, limitgreen, 1, 1);
+
+            o.Albedo = tes;
+            o.Emission = tes * 1.5;
         }
         ENDCG
     }
