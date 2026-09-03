@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dez
-  m_Shader: {fileID: 4800000, guid: cd10a2bdb75342e42b9fbcc8ecc48081, type: 3}
+  m_Name: Custom_GradeShader
+  m_Shader: {fileID: 4800000, guid: 4074500ee5d7a2ab5951d766d8fb22fe, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -29,13 +29,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AC: 1
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _RB: 0.7
-    - _RX: 0
+    - _RB: 0
+    - _RX: 100
     - _RY: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _SecColor: {r: 0.11764707, g: 0.12941177, b: 0.92549026, a: 1}
+    - _Color: {r: 0, g: 8, b: 1.2100849, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -37,7 +37,7 @@ Shader "Custom/PrimeiraTres"
             float2 uv = IN.uv_MainTex;
 
             //Usar sin e cos para variar entre zero e um
-            //O sin em x é 1.5
+            //O sin em x ï¿½ 1.5
 
             //limit red x = 2, y = -2, b = -2
             float limitred = ((uv.x * 2)) - ((uv.y * -2)) - 2;
@@ -47,7 +47,7 @@ Shader "Custom/PrimeiraTres"
             fixed4 tes = fixed4(limitred, limitgreen, 1, 1);
 
             o.Albedo = tes;
-            o.Emission = tes * 1.5;
+            //o.Emission = tes * 1.5;
         }
         ENDCG
     }

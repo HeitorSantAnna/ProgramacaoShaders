@@ -49,7 +49,7 @@ Shader "Custom/PrimriraDois"
             fixed4 finalcolor = lerp(_Color, _SecColor, res);
 
             o.Albedo = finalcolor;
-            o.Smoothness = 0.1;
+            //o.Smoothness = 0.1;
         }
         ENDCG
     }
