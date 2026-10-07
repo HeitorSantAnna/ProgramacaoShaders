@@ -1,9 +1,14 @@
-Shader "Custom/AT_Um"
+Shader "Custom/AT_Sete"
 {
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _SecColor ("Cor Secundaria", Color) = (1, 1, 1, 1)
+
+        _AA ("Alinhamento em A", Range(-1, 1)) = 0
+        _AB ("Alinhamento em B", Range(-1, 1)) = 0
+        _AC ("Alinhamento em C", Range(-1, 1)) = 0
     }
     SubShader
     {
@@ -17,16 +22,25 @@ Shader "Custom/AT_Um"
             float2 uv_MainTex;
         };
 
-        fixed4 _Color;
+        fixed4 _Color, _SecColor;
+
+        float _AA, _AB, _AC;
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
             float2 uv = IN.uv_MainTex;
 
-            float f = 1 - uv.x;
+            float f = round((uv.x * _AA) + (uv.y * _AB) + _AC);
 
-            o.Albedo = f;
+            if(f >= 0.5)
+            {
+                o.Albedo = _SecColor;
+            }
+            else
+            {
+                o.Albedo = _Color;
+            }
         }
         ENDCG
     }

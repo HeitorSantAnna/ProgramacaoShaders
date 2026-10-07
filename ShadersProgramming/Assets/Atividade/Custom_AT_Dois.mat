@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_Q_Quatro
-  m_Shader: {fileID: 4800000, guid: 2bf5cd62ee4696d449150894a046ba97, type: 3}
+  m_Name: Custom_AT_Dois
+  m_Shader: {fileID: 4800000, guid: d8cffc7966b5c5d4086e2be672a9da0d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,11 +29,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AA: 2.9
-    - _AB: -5
-    - _AC: 5
+    - _AA: 2
+    - _AB: -2
+    - _AC: -4.6
+    - _Glossiness: 0.5
+    - _Metallic: 0
     m_Colors:
-    - _PrinColor: {r: 1, g: 0, b: 0, a: 1}
-    - _SecColor: {r: 0, g: 1, b: 0.94130874, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

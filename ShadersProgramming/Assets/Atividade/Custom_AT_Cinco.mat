@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_AT_Um
-  m_Shader: {fileID: 4800000, guid: d92d9cdf9c3de9143ae688278752cf75, type: 3}
+  m_Name: Custom_AT_Cinco
+  m_Shader: {fileID: 4800000, guid: 9e4e5575510b5dd418a03cfdf66d40cf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,9 +29,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AA: -1
-    - _AB: -1
-    - _AC: -1
+    - _AA: 2
+    - _AB: 2
+    - _AC: 0.25
     - _Glossiness: 0.5
     - _Metallic: 0
     m_Colors:
